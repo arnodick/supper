@@ -60,6 +60,13 @@ supper.names = function(t)
 	t.names=n
 end
 
+--puts key indexed integers in a table for each integer indexed value
+supper.numbers = function(t)
+	for i,v in ipairs(t) do
+		t[v]=i
+	end
+end
+
 --gives a random entry in any integer-indexed table
 supper.random = function(t)
 	return t[math.random(#t)]
